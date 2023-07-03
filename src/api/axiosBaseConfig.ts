@@ -6,7 +6,7 @@ export const axiosBaseConfigOptions: AxiosRequestConfig = {
 }
 
 const baseHeaders = {
-  'x-platform': process.env.APP_PLATFORM,
+  'x-platform': process.env.APP_PLATFORM || process.env.APP_ID,
 }
 
 export const axiosInterceptorRequest = async (headerConfig: InternalAxiosRequestConfig) => {
